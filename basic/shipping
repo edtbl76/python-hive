@@ -1,0 +1,37 @@
+# variables
+weight = 41.5
+ground_price_per_pound = 0
+drone_price_per_pound = 0
+
+ground_shipping = 0
+ground_shipping_premium = 125
+drone_shipping = 0
+
+ground_flat_rate = 20
+
+
+
+
+# Ground Shipping
+if (weight <= 2 and weight > 0):
+  ground_price_per_pound = 1.5
+  drone_price_per_pound = 4.5
+elif (weight <= 6):
+  ground_price_per_pound = 3
+  drone_price_per_pound = 9
+elif (weight <= 10):
+  ground_price_per_pound = 4
+  drone_price_per_pound = 12
+elif (weight > 10):
+  ground_price_per_pound = 4.75
+  drone_price_per_pound = 14.25
+else:
+  print("Weight can't be negative!")
+
+
+ground_shipping = weight * ground_price_per_pound + ground_flat_rate
+drone_shipping = weight * drone_price_per_pound
+print(ground_shipping)
+print(ground_shipping_premium)
+print(drone_shipping)
+
